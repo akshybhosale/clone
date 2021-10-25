@@ -8,7 +8,7 @@ function Header() {
         <img src={logo} alt="Netflix Logo" />
         <nav className="desktop-nav">
           <ul>
-            <li><a href="#">Início</a></li>
+            <li className="selected"><a href="#">Início</a></li>
             <li><a href="#">Séries</a></li>
             <li><a href="#">Filmes</a></li>
             <li><a href="#">Bombando</a></li>

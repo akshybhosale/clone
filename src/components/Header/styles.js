@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export default styled.header`
   padding: 1rem 5rem;
   display: flex;
+  background-color: black;
 
   .navigation {
     display: flex;
@@ -25,9 +26,19 @@ export default styled.header`
       margin-left: 1.8rem;
     }
 
-    a {
-      font-size: 1.4rem;
+    .selected a {
+      color: ${({ theme }) => theme.text.white};
       font-weight: bold;
+    }
+
+    a {
+      color: ${({ theme }) => theme.text.gray};
+      font-size: 1.4rem;
+      transition: color .2s ease-in;
+
+      &:hover {
+        color: ${({ theme }) => theme.text.darkGray};
+      }
     }
   }
 

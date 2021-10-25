@@ -7,5 +7,6 @@ export default {
   text: {
     white: '#ffffff',
     gray: '#e5e5e5',
+    darkGray: '#b5b5b5',
   }
 };
