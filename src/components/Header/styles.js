@@ -134,6 +134,10 @@ export const NotificationsContainer = styled.div`
   img {
     height: 2rem;
   }
+
+  @media (max-width: 800px) {
+    margin-left: 0;
+  }
 `;
 
 export const ProfileBoxContainer = styled.div`
@@ -212,6 +216,8 @@ export const ProfileBoxContainer = styled.div`
   }
 
   .kids {
+    display: none;
+
     padding: 1rem;
     border-top: 1px solid ${({ theme }) => theme.text.veryDarkGray};
 
@@ -247,6 +253,12 @@ export const ProfileBoxContainer = styled.div`
       opacity: 1;
     }
   }
+
+  @media (max-width: 800px) {
+    .kids {
+      display: block;
+    }
+  }
 `;
 
 export const Container = styled.header`
@@ -270,8 +282,12 @@ export const Container = styled.header`
   }
 
   .info {
-    a {
+    > a {
       height: initial;
+
+      @media (max-width: 800px) {
+        display: none;
+      }
     }
   }
 
