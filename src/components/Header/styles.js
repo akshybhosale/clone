@@ -127,6 +127,14 @@ export const SearchBarContainer = styled.div`
   }
 `;
 
+export const NotificationsContainer = styled.div`
+  margin-left: 1.4rem;
+
+  img {
+    height: 2rem;
+  }
+`;
+
 export const Container = styled.header`
   padding: 1rem 5rem;
   display: flex;
@@ -144,6 +152,14 @@ export const Container = styled.header`
   .navigation, .info {
     display: flex;
     align-items: center;
+  }
+
+  .info {
+
+    a {
+      height: initial;
+      margin-left: 1.4rem;
+    }
   }
 
   .logo {

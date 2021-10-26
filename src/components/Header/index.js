@@ -5,6 +5,7 @@ import logo from '../../assets/images/logo.png';
 import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 import SearchBar from './SearchBar';
+import Notifications from './Notifications';
 
 function Header({searchRef}) {
   return (
@@ -16,6 +17,8 @@ function Header({searchRef}) {
       </div>
       <div className="info">
         <SearchBar searchRef={searchRef} />
+        <a href="#">Infantil</a>
+        <Notifications />
       </div>
     </Container>
   )
