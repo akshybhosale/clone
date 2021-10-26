@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const MobileNavContainer = styled.nav`
   position: relative;
   height: 100%;
+  display: none;
 
   > a {
     display: flex;
@@ -75,8 +76,6 @@ export const MobileNavContainer = styled.nav`
 `;
 
 export const DesktopNavContainer = styled.nav`
-  display: none;
-
   ul {
     display: flex;
   }
@@ -116,5 +115,15 @@ export const Container = styled.header`
   img {
     height: 5rem;
     margin-right: 2.5rem;
+  }
+
+  @media (max-width: 1000px) {
+    nav:first-of-type {
+      display: none;
+    }
+
+    nav:last-of-type {
+      display: initial;
+    }
   }
 `;
