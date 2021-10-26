@@ -140,6 +140,18 @@ export const ProfileBoxContainer = styled.div`
   position: relative;
   height: 100%;
 
+  .callout-arrow {
+    position: absolute;
+    left: 25%;
+
+    border: 7px solid;
+    border-color: transparent transparent ${({ theme }) => theme.text.gray};
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in;
+  }
+
   img {
     height: 4rem;
     border-radius: 1rem;
@@ -149,6 +161,7 @@ export const ProfileBoxContainer = styled.div`
     display: flex;
     align-items: center;
     height: 100%;
+    cursor: pointer;
 
     span {
       margin-left: 1rem;
@@ -167,14 +180,71 @@ export const ProfileBoxContainer = styled.div`
 
   .dropdown {
     visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in;
+
+    background: rgba(10, 10, 10, .95);
     position: absolute;
+    transform: translateX(-65%);
+    overflow: hidden;
+    width: 18rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    color: ${({ theme }) => theme.text.white};
+    font-size: 1.4rem;
+
+    padding: 1rem;
+
+    img {
+      margin-right: 1.2rem;
+    }
+
+    &:hover {
+      span, a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .kids {
+    padding: 1rem;
+    border-top: 1px solid ${({ theme }) => theme.text.veryDarkGray};
+
+    &:hover {
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .options {
+    border-top: 1px solid ${({ theme }) => theme.text.veryDarkGray};
+
+    a {
+      font-weight: bold;
+    }
   }
 
   &:hover {
     cursor: hover;
 
-    span {
+    .main-profile span {
       transform: rotate(180deg);
+    }
+
+    .dropdown {
+      visibility: initial;
+      opacity: 1;
+    }
+
+    .callout-arrow {
+      visibility: initial;
+      opacity: 1;
     }
   }
 `;

@@ -11,7 +11,9 @@ export default function ProfileBox() {
         <img src={anne} alt="Current Profile Picture" />
         <span></span>
       </div>
-      <div className="complement" />
+      <div className="complement">
+        <div className="callout-arrow" />
+      </div>
       <div className="dropdown">
         <ul>
           <li>
@@ -22,9 +24,26 @@ export default function ProfileBox() {
             <img src={mason} alt="Other Profile 2" />
             <span>Mason</span>
           </li>
+          <li>
+            <span>Gerenciar perfis</span>
+          </li>
         </ul>
-        <a href="#"></a>
-        <div className="options"></div>
+        <div className="kids">
+          <a href="#">Infantil</a>
+        </div>
+        <div className="options">
+          <ul>
+            <li>
+              <a href="#">Conta</a>
+            </li>
+            <li>
+              <a href="#">Centro de ajuda</a>
+            </li>
+            <li>
+              <a href="#">Sair da Netflix</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </ProfileBoxContainer>
   );
