@@ -94,9 +94,43 @@ export const DesktopNavContainer = styled.nav`
   } 
 `;
 
+export const SearchBarContainer = styled.div`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  
+  img {
+    height: 2rem;
+    margin-right: 1.2rem;
+  }
+
+  input {
+    width: 0;
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    transition: all .25s ease-in;
+    color: #fff;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.in-use {
+    border: 1px solid ${({ theme }) => theme.text.white};
+    padding: .6rem;
+
+    input {
+      width: 200px;
+    }
+  }
+`;
+
 export const Container = styled.header`
   padding: 1rem 5rem;
   display: flex;
+  justify-content: space-between;
   background-color: black;
 
   a {
@@ -107,12 +141,12 @@ export const Container = styled.header`
     height: 100%;
   }
 
-  .navigation {
+  .navigation, .info {
     display: flex;
     align-items: center;
   }
 
-  img {
+  .logo {
     height: 5rem;
     margin-right: 2.5rem;
   }
