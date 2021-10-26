@@ -4,8 +4,10 @@ export default function MobileNav() {
   return (
     <MobileNavContainer>
       <a href="#">Navegar</a>
+      <div className="complement" />
       <ul>
-        <li><a href="#">Início</a></li>
+        <div className="callout-arrow" />
+        <li><a className="current" href="#">Início</a></li>
         <li><a href="#">Séries</a></li>
         <li><a href="#">Filmes</a></li>
         <li><a href="#">Bombando</a></li>
