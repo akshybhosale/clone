@@ -28,7 +28,7 @@ export const MobileNavContainer = styled.nav`
     opacity: 0;
     position: absolute;
     transform: translateX(-20%);
-    transition: all .2s;
+    transition: all 0.2s;
     border: 1px solid ${({ theme }) => theme.text.veryDarkGray};
     border-top: 3px solid ${({ theme }) => theme.text.gray};
 
@@ -52,8 +52,8 @@ export const MobileNavContainer = styled.nav`
       display: block;
       width: 20rem;
       padding: 1.6rem 0;
-      background: rgba(10, 10, 10, .9);
-      transition: background .25s ease-in;
+      background: rgba(10, 10, 10, 0.9);
+      transition: background 0.25s ease-in;
 
       &.current {
         color: ${({ theme }) => theme.text.gray};
@@ -62,7 +62,7 @@ export const MobileNavContainer = styled.nav`
       }
 
       &:hover {
-        background: rgba(10, 10, 10, .95);
+        background: rgba(10, 10, 10, 0.95);
       }
     }
   }
@@ -91,17 +91,17 @@ export const DesktopNavContainer = styled.nav`
 
   a:hover {
     color: ${({ theme }) => theme.text.darkGray};
-  } 
+  }
 `;
 
 export const SearchBarContainer = styled.div`
   color: #fff;
   display: flex;
   align-items: center;
-  
+  margin-right: 2.6rem;
+
   img {
     height: 2rem;
-    margin-right: 1.2rem;
   }
 
   input {
@@ -109,17 +109,18 @@ export const SearchBarContainer = styled.div`
     background: transparent;
     border: none;
     font-size: 1.4rem;
-    transition: all .25s ease-in;
+    transition: all 0.25s ease-in;
     color: #fff;
 
     &:focus {
       outline: none;
+      margin-left: 1.2rem;
     }
   }
 
   &.in-use {
     border: 1px solid ${({ theme }) => theme.text.white};
-    padding: .6rem;
+    padding: 0.6rem;
 
     input {
       width: 200px;
@@ -128,10 +129,53 @@ export const SearchBarContainer = styled.div`
 `;
 
 export const NotificationsContainer = styled.div`
-  margin-left: 1.4rem;
+  margin: 0 2.8rem;
 
   img {
     height: 2rem;
+  }
+`;
+
+export const ProfileBoxContainer = styled.div`
+  position: relative;
+  height: 100%;
+
+  img {
+    height: 4rem;
+    border-radius: 1rem;
+  }
+
+  .main-profile {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    span {
+      margin-left: 1rem;
+      width: 0;
+      height: 0;
+      border-width: 5px 5px 0 5px;
+      border-style: solid;
+      border-color: #fff transparent transparent transparent;
+      transition: transform 0.367s;
+    }
+  }
+
+  .complement {
+    height: 1.3rem;
+  }
+
+  .dropdown {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &:hover {
+    cursor: hover;
+
+    span {
+      transform: rotate(180deg);
+    }
   }
 `;
 
@@ -144,21 +188,20 @@ export const Container = styled.header`
   a {
     color: ${({ theme }) => theme.text.gray};
     font-size: 1.4rem;
-    transition: color .2s ease-in;
+    transition: color 0.2s ease-in;
     width: 100%;
     height: 100%;
   }
 
-  .navigation, .info {
+  .navigation,
+  .info {
     display: flex;
     align-items: center;
   }
 
   .info {
-
     a {
       height: initial;
-      margin-left: 1.4rem;
     }
   }
 

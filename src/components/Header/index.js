@@ -6,8 +6,9 @@ import DesktopNav from './DesktopNav';
 import MobileNav from './MobileNav';
 import SearchBar from './SearchBar';
 import Notifications from './Notifications';
+import ProfileBox from './ProfileBox';
 
-function Header({searchRef}) {
+function Header({ searchRef }) {
   return (
     <Container>
       <div className="navigation">
@@ -19,15 +20,16 @@ function Header({searchRef}) {
         <SearchBar searchRef={searchRef} />
         <a href="#">Infantil</a>
         <Notifications />
+        <ProfileBox />
       </div>
     </Container>
-  )
+  );
 }
 
 Header.propTypes = {
   searchRef: PropTypes.shape({
     current: PropTypes.node,
   }).isRequired,
-}
+};
 
 export default Header;
