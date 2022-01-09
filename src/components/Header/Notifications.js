@@ -5,7 +5,7 @@ export default function Notifications() {
   return (
     <NotificationsContainer>
       <img src={bell} alt="Notifications Bell" />
-      <div className="notifications-exhibition"></div>
+      <div className="notifications-exhibition" />
     </NotificationsContainer>
   );
 }

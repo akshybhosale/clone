@@ -8,8 +8,8 @@ export default function ProfileBox() {
   return (
     <ProfileBoxContainer>
       <div className="main-profile">
-        <img src={anne} alt="Current Profile Picture" />
-        <span></span>
+        <img src={anne} alt="Current Profile" />
+        <span />
       </div>
       <div className="complement">
         <div className="callout-arrow" />
