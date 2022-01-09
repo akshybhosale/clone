@@ -1,5 +1,8 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+
+import tmdb from '../../tmdb';
+
 import GlobalStyle from '../../assets/styles/GlobalStyle';
 import theme from '../../assets/styles/theme';
 import handlePageClick from '../../functions/handlePageClick';
@@ -7,7 +10,16 @@ import Header from '../Header';
 import Container from './styles';
 
 function App() {
+  const [categories, setCategories] = useState([]);
+
   const ref = useRef(null);
+
+  useEffect(() => {
+    (async () => {
+      const apiCategories = await tmdb.getCategories();
+      setCategories(apiCategories);
+    })();
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
