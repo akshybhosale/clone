@@ -21,6 +21,10 @@ function App() {
     })();
   }, []);
 
+  useEffect(() => {
+    console.log(categories);
+  }, [categories]);
+
   return (
     <ThemeProvider theme={theme}>
       <Container onClick={(e) => handlePageClick(e, ref)}>

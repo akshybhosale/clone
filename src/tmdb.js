@@ -9,8 +9,8 @@ const instance = axios.create({
 });
 
 async function request(endpoint) {
-  const reqValue = await instance.get(endpoint);
-  return reqValue;
+  const { data } = await instance.get(endpoint);
+  return data.results;
 }
 
 export default {
