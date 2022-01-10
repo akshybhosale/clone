@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import Slider from 'react-slick';
+
 import MovieCard from './MovieCard';
 
 import { MovieRowContainer } from './styles';
@@ -6,14 +8,18 @@ import { MovieRowContainer } from './styles';
 function MovieRow({ category }) {
   const { title, items } = category;
 
+  const sliderSettings = {
+
+  };
+
   return (
     <MovieRowContainer>
       <header>
         <h3>{title}</h3>
       </header>
-      <div className="list-slider">
+      <Slider {...sliderSettings}>
         {items.map((item) => <MovieCard movie={item} />)}
-      </div>
+      </Slider>
     </MovieRowContainer>
   );
 }
