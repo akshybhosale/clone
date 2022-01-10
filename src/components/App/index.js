@@ -8,6 +8,7 @@ import theme from '../../assets/styles/theme';
 import handlePageClick from '../../functions/handlePageClick';
 import Header from '../Header';
 import Container from './styles';
+import Overview from '../Overview';
 
 function App() {
   const [categories, setCategories] = useState([]);
@@ -30,7 +31,7 @@ function App() {
       <Container onClick={(e) => handlePageClick(e, ref)}>
         <GlobalStyle />
         <Header searchRef={ref} />
-        <div className="test" />
+        <Overview />
       </Container>
     </ThemeProvider>
   );
