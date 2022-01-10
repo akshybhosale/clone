@@ -21,6 +21,12 @@ const Info = styled.div`
     line-height: 3rem;
 
     margin: 2rem 0;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .actions {
