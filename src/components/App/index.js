@@ -11,7 +11,7 @@ import Container from './styles';
 import Overview from '../Overview';
 
 function App() {
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState();
 
   const ref = useRef(null);
 
@@ -22,16 +22,12 @@ function App() {
     })();
   }, []);
 
-  useEffect(() => {
-    console.log(categories);
-  }, [categories]);
-
   return (
     <ThemeProvider theme={theme}>
       <Container onClick={(e) => handlePageClick(e, ref)}>
         <GlobalStyle />
         <Header searchRef={ref} />
-        <Overview />
+        {categories && <Overview item={categories[0]?.items[Math.floor(Math.random() * 20)]} />}
       </Container>
     </ThemeProvider>
   );
