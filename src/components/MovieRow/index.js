@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
+import MovieCard from './MovieCard';
 
 import { MovieRowContainer } from './styles';
-
-const IMAGE_PATH = 'https://image.tmdb.org/t/p/w300';
 
 function MovieRow({ category }) {
   const { title, items } = category;
@@ -12,7 +11,9 @@ function MovieRow({ category }) {
       <header>
         <h3>{title}</h3>
       </header>
-      <div className="list-slider" />
+      <div className="list-slider">
+        {items.map((item) => <MovieCard movie={item} />)}
+      </div>
     </MovieRowContainer>
   );
 }
