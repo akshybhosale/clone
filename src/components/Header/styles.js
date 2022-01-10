@@ -265,10 +265,11 @@ export const Container = styled.header`
   padding: 1rem 5rem;
   display: flex;
   justify-content: space-between;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,.7) 10%, rgba(0,0,0,0));
+  background: linear-gradient(to bottom, rgba(0,0,0,.7) 10%, rgba(0,0,0,0));
   position: fixed;
   width: 100%;
 
+  transition: background .24s ease-in;
   z-index: 10000;
 
   a {

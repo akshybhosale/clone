@@ -21,8 +21,6 @@ function App() {
   const headerRef = useRef(null);
 
   function handleScroll() {
-    console.log(headerRef);
-
     if (window.scrollY !== 0) {
       headerRef.current.classList.add('no-transparency');
     } else {
