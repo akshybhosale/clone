@@ -38,6 +38,7 @@ const MovieCardContainer = styled.div`
 
   margin-right: 2rem;
 
+  cursor: pointer;
   transition: transform .24s ease-out;
 
   img {
