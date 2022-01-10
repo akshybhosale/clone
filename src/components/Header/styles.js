@@ -305,13 +305,19 @@ export const Container = styled.header`
     background-color: ${({ theme }) => theme.main.black};
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     nav:first-of-type {
       display: none;
     }
 
     nav:last-of-type {
       display: initial;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #search-bar {
+      display: none;
     }
   }
 `;

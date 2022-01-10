@@ -72,6 +72,10 @@ const Info = styled.div`
       }
     }
   }
+
+  @media (max-width: 750px) {
+    transform: translateY(0);
+  }
 `;
 
 const ToTopOverlay = styled.div`

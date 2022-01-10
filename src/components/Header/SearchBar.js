@@ -5,7 +5,7 @@ import magnifier from '../../assets/images/magnifier.png';
 
 function SearchBar({ searchRef }) {
   return (
-    <SearchBarContainer ref={searchRef}>
+    <SearchBarContainer id="search-bar" ref={searchRef}>
       <img src={magnifier} alt="" />
       <input type="text" placeholder="Títulos, gente e gêneros" />
     </SearchBarContainer>
