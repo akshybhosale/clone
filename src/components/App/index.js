@@ -9,6 +9,7 @@ import handlePageClick from '../../functions/handlePageClick';
 import Header from '../Header';
 import Container from './styles';
 import Overview from '../Overview';
+import MovieRow from '../MovieRow';
 
 function App() {
   const [categories, setCategories] = useState();
@@ -27,7 +28,8 @@ function App() {
       <Container onClick={(e) => handlePageClick(e, ref)}>
         <GlobalStyle />
         <Header searchRef={ref} />
-        {categories && <Overview item={categories[0]?.items[Math.floor(Math.random() * 20)]} />}
+        {categories && <Overview item={categories[0].items[Math.floor(Math.random() * 20)]} />}
+        {categories && categories.map((category) => <MovieRow category={category} />)}
       </Container>
     </ThemeProvider>
   );
