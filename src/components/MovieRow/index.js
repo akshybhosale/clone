@@ -1,13 +1,27 @@
 import PropTypes from 'prop-types';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { MovieRowContainer } from './styles';
 
+const IMAGE_PATH = 'https://image.tmdb.org/t/p/w300';
+
 function MovieRow({ category }) {
+  const { title, items } = category;
+
   return (
     <MovieRowContainer>
       <header>
-        <h3>{category.title}</h3>
+        <h3>{title}</h3>
       </header>
-      <div className="list-slider" />
+      <div className="list-slider">
+        <Swiper>
+          {items.map((item) => (
+            <SwiperSlide>
+              <img src={`${IMAGE_PATH}${item.poster_path}`} alt="Movie Poster" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </MovieRowContainer>
   );
 }
@@ -15,6 +29,9 @@ function MovieRow({ category }) {
 MovieRow.propTypes = {
   category: PropTypes.shape({
     title: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(
+      PropTypes.shape.isRequired,
+    ).isRequired,
   }).isRequired,
 };
 
