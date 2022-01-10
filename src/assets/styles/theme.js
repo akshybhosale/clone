@@ -2,7 +2,7 @@ export default {
   main: {
     red: '#e50914',
     desaturatedRed: '#b81d24',
-    black: '#221f1f',
+    black: '#141414',
   },
   text: {
     white: '#ffffff',
