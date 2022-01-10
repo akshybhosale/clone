@@ -265,9 +265,11 @@ export const Container = styled.header`
   padding: 1rem 5rem;
   display: flex;
   justify-content: space-between;
-  background-image: linear-gradient(to bottom,rgba(0,0,0,.7) 10%,rgba(0,0,0,0));
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.7) 10%, rgba(0,0,0,0));
   position: fixed;
   width: 100%;
+
+  z-index: 10000;
 
   a {
     color: ${({ theme }) => theme.text.gray};
@@ -296,6 +298,10 @@ export const Container = styled.header`
   .logo {
     height: 5rem;
     margin-right: 2.5rem;
+  }
+
+  &.no-transparency {
+    background-color: ${({ theme }) => theme.main.black};
   }
 
   @media (max-width: 1000px) {

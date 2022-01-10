@@ -17,7 +17,18 @@ import 'slick-carousel/slick/slick-theme.css';
 function App() {
   const [categories, setCategories] = useState();
 
-  const ref = useRef(null);
+  const searchRef = useRef(null);
+  const headerRef = useRef(null);
+
+  function handleScroll() {
+    console.log(headerRef);
+
+    if (window.scrollY !== 0) {
+      headerRef.current.classList.add('no-transparency');
+    } else {
+      headerRef.current.classList.remove('no-transparency');
+    }
+  }
 
   useEffect(() => {
     (async () => {
@@ -26,11 +37,17 @@ function App() {
     })();
   }, []);
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
-      <Container onClick={(e) => handlePageClick(e, ref)}>
+      <Container onClick={(e) => handlePageClick(e, searchRef)}>
         <GlobalStyle />
-        <Header searchRef={ref} />
+        <Header searchRef={searchRef} headerRef={headerRef} />
         {categories && <Overview item={categories[0].items[Math.floor(Math.random() * 20)]} />}
         <div className="movie-rows">
           {categories && categories.map((category) => <MovieRow category={category} />)}

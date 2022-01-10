@@ -8,9 +8,9 @@ import SearchBar from './SearchBar';
 import Notifications from './Notifications';
 import ProfileBox from './ProfileBox';
 
-function Header({ searchRef }) {
+function Header({ searchRef, headerRef }) {
   return (
-    <Container>
+    <Container ref={headerRef}>
       <div className="navigation">
         <img className="logo" src={logo} alt="Netflix Logo" />
         <DesktopNav />
@@ -27,9 +27,8 @@ function Header({ searchRef }) {
 }
 
 Header.propTypes = {
-  searchRef: PropTypes.shape({
-    current: PropTypes.node,
-  }).isRequired,
+  searchRef: PropTypes.shape.isRequired,
+  headerRef: PropTypes.shape.isRequired,
 };
 
 export default Header;
