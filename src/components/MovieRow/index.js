@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { MovieRowContainer } from './styles';
 
@@ -13,15 +12,7 @@ function MovieRow({ category }) {
       <header>
         <h3>{title}</h3>
       </header>
-      <div className="list-slider">
-        <Swiper>
-          {items.map((item) => (
-            <SwiperSlide>
-              <img src={`${IMAGE_PATH}${item.poster_path}`} alt="Movie Poster" />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <div className="list-slider" />
     </MovieRowContainer>
   );
 }
