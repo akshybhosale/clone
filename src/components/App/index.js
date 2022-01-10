@@ -11,6 +11,9 @@ import Container from './styles';
 import Overview from '../Overview';
 import MovieRow from '../MovieRow';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 function App() {
   const [categories, setCategories] = useState();
 
@@ -29,7 +32,9 @@ function App() {
         <GlobalStyle />
         <Header searchRef={ref} />
         {categories && <Overview item={categories[0].items[Math.floor(Math.random() * 20)]} />}
-        {categories && categories.map((category) => <MovieRow category={category} />)}
+        <div className="movie-rows">
+          {categories && categories.map((category) => <MovieRow category={category} />)}
+        </div>
       </Container>
     </ThemeProvider>
   );

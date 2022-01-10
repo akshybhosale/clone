@@ -13,7 +13,9 @@ export default createGlobalStyle`
   }
 
   body {
-    background: black;
+    background: ${({ theme }) => theme.main.black};
+
+    overflow-x: hidden;
   }
 
   a {
