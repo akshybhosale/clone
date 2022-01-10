@@ -13,6 +13,7 @@ import MovieRow from '../MovieRow';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Footer from '../Footer';
 
 function App() {
   const [categories, setCategories] = useState();
@@ -50,6 +51,7 @@ function App() {
         <div className="movie-rows">
           {categories && categories.map((category) => <MovieRow category={category} />)}
         </div>
+        <Footer />
       </Container>
     </ThemeProvider>
   );
