@@ -34,7 +34,6 @@ const StyledNavigateButton = styled.button`
 `;
 
 const MovieCardContainer = styled.div`
-  background: red;
 
   margin-right: 2rem;
 
