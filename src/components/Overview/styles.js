@@ -31,6 +31,20 @@ const Info = styled.div`
 
   .actions {
     display: flex;
+
+    @media (max-width: 380px) {
+      flex-direction: column;
+      
+      button {
+        justify-content: center;
+
+        margin: 0 0 2rem;
+
+        &#info {
+          margin-right: 2rem;
+        }
+      }
+    }
   }
 
   button {

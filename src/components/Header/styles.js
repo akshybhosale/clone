@@ -41,6 +41,18 @@ export const MobileNavContainer = styled.nav`
       width: 0;
       border: 7px solid;
       border-color: transparent transparent #e5e5e5;
+
+      @media (max-width: 800px) {
+        top: -1.8rem;
+      }
+
+      @media (max-width: 620px) {
+        top: -2rem;
+      }
+
+      @media (max-width: 420px) {
+        top: -2.2rem;
+      }
     }
   }
 
@@ -137,6 +149,10 @@ export const NotificationsContainer = styled.div`
 
   @media (max-width: 800px) {
     margin-left: 0;
+  }
+
+  @media (max-width: 380px) {
+    display: none;
   }
 `;
 
