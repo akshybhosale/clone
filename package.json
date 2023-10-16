@@ -1,8 +1,8 @@
 {
-  "name": "netflix-interface-clone",
+  "name": "Home",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://whoiscaio.github.io/netflix-interface-clone",
+  "homepage": "home",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -12,7 +12,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3",
