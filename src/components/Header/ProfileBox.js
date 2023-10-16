@@ -18,29 +18,29 @@ export default function ProfileBox() {
         <ul>
           <li>
             <img src={bea} alt="Other Profile 1" />
-            <span>Bea</span>
+            <span>Akshay</span>
           </li>
           <li>
             <img src={mason} alt="Other Profile 2" />
-            <span>Mason</span>
+            <span>Bhosale</span>
           </li>
           <li>
-            <span>Gerenciar perfis</span>
+            <span>Manage profiles</span>
           </li>
         </ul>
         <div className="kids">
-          <a href="#">Infantil</a>
+          <a href="#">Kids</a>
         </div>
         <div className="options">
           <ul>
             <li>
-              <a href="#">Conta</a>
+              <a href="#">Account</a>
             </li>
             <li>
-              <a href="#">Centro de ajuda</a>
+              <a href="#">Help center</a>
             </li>
             <li>
-              <a href="#">Sair da Netflix</a>
+              <a href="#">Sign Out</a>
             </li>
           </ul>
         </div>

@@ -18,7 +18,7 @@ function Header({ searchRef, headerRef }) {
       </div>
       <div className="info">
         <SearchBar searchRef={searchRef} />
-        <a href="#">Infantil</a>
+        <a href="#">Kids</a>
         <Notifications />
         <ProfileBox />
       </div>

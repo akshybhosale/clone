@@ -3,26 +3,26 @@ import { MobileNavContainer } from './styles';
 export default function MobileNav() {
   return (
     <MobileNavContainer>
-      <a href="#">Navegar</a>
+      <a href="#">Menu Bar</a>
       <div className="complement" />
       <ul>
         <div className="callout-arrow" />
         <li>
           <a className="current" href="#">
-            Início
+            Home
           </a>
         </li>
         <li>
-          <a href="#">Séries</a>
+          <a href="#">Series</a>
         </li>
         <li>
-          <a href="#">Filmes</a>
+          <a href="#">Movies</a>
         </li>
         <li>
-          <a href="#">Bombando</a>
+          <a href="#">Latest Series</a>
         </li>
         <li>
-          <a href="#">Minha Lista</a>
+          <a href="#">My List</a>
         </li>
       </ul>
     </MobileNavContainer>

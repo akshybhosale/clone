@@ -22,11 +22,11 @@ function Overview({ item }) {
             <div className="actions">
               <button id="play" type="button">
                 <img src={play} alt="Play" />
-                Assistir
+                Play play
               </button>
               <button id="info" type="button">
                 <img src={info} alt="Info" />
-                Mais informações
+                Moives info..
               </button>
             </div>
           </Info>
