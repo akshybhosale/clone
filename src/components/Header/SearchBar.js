@@ -7,7 +7,7 @@ function SearchBar({ searchRef }) {
   return (
     <SearchBarContainer id="search-bar" ref={searchRef}>
       <img src={magnifier} alt="" />
-      <input type="text" placeholder="Títulos, gente e gêneros" />
+      <input type="text" placeholder="Input here" />
     </SearchBarContainer>
   );
 }

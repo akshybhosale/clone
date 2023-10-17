@@ -5,19 +5,19 @@ export default function DesktopNav() {
     <DesktopNavContainer>
       <ul>
         <li className="selected">
-          <a href="#">Início</a>
+          <a href="#">Home</a>
         </li>
         <li>
-          <a href="#">Séries</a>
+          <a href="#">TV shows</a>
         </li>
         <li>
-          <a href="#">Filmes</a>
+          <a href="#">Movies</a>
         </li>
         <li>
-          <a href="#">Bombando</a>
+          <a href="#">New & Popular</a>
         </li>
         <li>
-          <a href="#">Minha Lista</a>
+          <a href="#">My List</a>
         </li>
       </ul>
     </DesktopNavContainer>

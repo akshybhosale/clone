@@ -1,17 +1,17 @@
 import FooterContainer from './styles';
 
-import github from '../../assets/images/github.svg';
-import linkedin from '../../assets/images/linkedin.svg';
+import github from '../../assets/images/github.png';
+import linkedin from '../../assets/images/linkedin.png';
 
 function Footer() {
   return (
     <FooterContainer>
-      <span>Desenvolvido por Caio Lima</span>
+      <span>Developed by Akshay Bhosale</span>
       <div className="socials">
-        <a id="github" href="https://github.com/whoiscaio" target="_blank" rel="noreferrer">
+        <a id="github" href="https://github.com/akshybhosale" target="_blank" rel="noreferrer">
           <img src={github} alt="Github" />
         </a>
-        <a id="linkedin" href="https://linkedin.com/in/lima-caio" target="_blank" rel="noreferrer">
+        <a id="linkedin" href="https://www.linkedin.com/in/akshay-bhosale-480a6b189/" target="_blank" rel="noreferrer">
           <img src={linkedin} alt="Linkedin" />
         </a>
       </div>

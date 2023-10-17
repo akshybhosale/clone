@@ -2,9 +2,11 @@ import axios from 'axios';
 
 const instance = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
+
+  // baseURL : 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup',
   params: {
     api_key: '94d660a629d9ae773753ee76760166b0',
-    language: 'pt-BR',
+    language: 'en',
   },
 });
 
@@ -17,35 +19,35 @@ export default {
   getCategories: async () => ([
     {
       id: 'originals',
-      title: 'Originais Netflix',
+      title: 'OrignialS NetfliX',
       items: await request('/discover/tv?with_network=213'),
     }, {
       id: 'trending',
-      title: 'Recomendados para você',
+      title: 'TrendinG',
       items: await request('/trending/all/week'),
     }, {
       id: 'toprated',
-      title: 'Em alta',
+      title: 'Top RateD',
       items: await request('/movie/top_rated'),
     }, {
       id: 'action',
-      title: 'Ação',
+      title: 'ActioN',
       items: await request('/discover/movie?with_genres=28'),
     }, {
       id: 'comedy',
-      title: 'Comédia',
+      title: 'ComedY',
       items: await request('/discover/movie?with_genres=35'),
     }, {
       id: 'horror',
-      title: 'Terror',
+      title: 'HorroR',
       items: await request('/discover/movie?with_genres=27'),
     }, {
       id: 'romance',
-      title: 'Romance',
+      title: 'RomancE',
       items: await request('/discover/movie?with_genres=10749'),
     }, {
       id: 'documentary',
-      title: 'Documentários',
+      title: 'DocumentarY',
       items: await request('/discover/movie?with_genres=99'),
     },
   ]),
