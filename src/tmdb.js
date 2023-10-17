@@ -2,6 +2,8 @@ import axios from 'axios';
 
 const instance = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
+
+  // baseURL : 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup',
   params: {
     api_key: '94d660a629d9ae773753ee76760166b0',
     language: 'en',
