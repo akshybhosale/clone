@@ -1,6 +1,6 @@
 # 💻 About the project
 
-## Resumo
+## Resume
 
 The project is a clone of the Netflix interface.
 
@@ -29,7 +29,3 @@ Or, if you prefer to use yarn
 ```bash
 yarn start
 ```
-
-## Links
-
-[Live Site](https://whoiscaio.github.io/netflix-interface-clone)
