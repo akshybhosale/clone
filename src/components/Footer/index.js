@@ -1,10 +1,9 @@
 import FooterContainer from './styles';
-
 import github from '../../assets/images/github.png';
 import linkedin from '../../assets/images/linkedin.png';
-
 function Footer() {
   return (
+    <>
     <FooterContainer>
       <span>Developed by Akshay Bhosale</span>
       <div className="socials">
@@ -15,7 +14,10 @@ function Footer() {
           <img src={linkedin} alt="Linkedin" />
         </a>
       </div>
+    
     </FooterContainer>
+   
+    </>
   );
 }
 

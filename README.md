@@ -17,7 +17,7 @@ The project is a clone of the Netflix interface.
 
 Clone the repository
 ```bash
-git clone https://github.com/whoiscaio/netflix-interface-clone
+git clone
 ```
 
 Execute the server
